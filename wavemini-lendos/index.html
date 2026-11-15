@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WaveMini.ru</title>
+        <title>WaveMini</title>
         <link rel="stylesheet" href="./css/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="128x128" />
     </head>
     <body>
        <div class="root">
-           <div class="main">
+           <div id="main"  class="main">
               <div class="dock-panel">
                 <div class="dock-block-one">
-                    <div class="dock-logo"></div>
+                    <div class="dock-logo"><a href="#main"></a></div>
                 </div>
                 <div class="dock-block-two">
                     <div class="dock-two-btn">
@@ -22,18 +23,36 @@
                 </div>
               </div>
               <div class="content">
-                 <div class="main-block">
+                 <div class="main-block fade-in">
                      <div class="main-icon"></div>
                      <section>
                         <h1>WaveMini.</h1>
                         <span>Делаем больше. Тратя меньше.</span>
-                        <button>Связаться</button>
+                        <button onclick="window.open('https://t.me/@DevWave')">Связаться</button>
                      </section>
                  </div>
-                 <div class="news-block">
+                 <div id="news" class="news-block fade-in">
                     <h1>Новости:</h1>
                     <div class="news-cards">
 
+                        <div class="card-news">
+                            <div style="background-image: url('./pictures/main-icon-static.png'); background-position: 0 -20px;" class="news-card-img"></div>
+                            <img class="card-news-icon" src="./icons/newspaper.svg" alt="NEWS">
+                             <span>15.11.26</span>
+                            <section>
+                                <h3>Новый WaveMini - Новый дизайн.</h3>
+                                <div>Мы полностью переработали дизайн основного лендинга wavemini.ru, а так-же делаем дизайн WaveChat удобнее. </div>
+                            </section>
+                        </div>
+                        <div class="card-news">
+                            <div style="background-image: url('./pictures/beget-dang.webp'); background-position: 0 0;" class="news-card-img"></div>
+                            <img class="card-news-icon" src="./icons/newspaper.svg" alt="NEWS">
+                             <span>02.11.26</span>
+                            <section>
+                                <h3>Масштабный сбой Beget.</h3>
+                                <div>Из-за атаки на серверва Beget наша команда потеряла S3 хранилище, которое должен был использовать WaveChat, а так-же были проблемы с NS-серверами. </div>
+                            </section>
+                        </div>
                         <div class="card-news">
                             <div style="background-image: url('./pictures/n_wavechatbeta.jpeg'); background-position: 0 90%;" class="news-card-img"></div>
                             <img class="card-news-icon" src="./icons/newspaper.svg" alt="NEWS">
@@ -54,11 +73,11 @@
                         </div>
                     </div>
                  </div>
-                 <div class="projects-block">
+                 <div id="projects" class="projects-block fade-in">
                     <h1>Проекты:</h1>
                     <div class="projects-cards">
                         <div class="card-project">
-                            <img src="./pictures/wavechat-prew.webp" class="img-card-project"/>
+                            <img src="./pictures/logo38383.png" style="object-position: 0 50%;" class="img-card-project"/>
                             <section>
                                 <img src="https://wavemini.ru/a/wavechat/logo1.png" class="icon-card-project"/>
                                 <div class="project-info">
@@ -69,13 +88,13 @@
                             <div class="bio-project-card">
                                <span>Многофункциональный мессенджер с real-time сообщениями и AES-шифрованием и классным дизайном.</span>
                                <div class="project-card-btn">
-                                  <button>GitHub</button>
-                                  <button>Telegram</button>
+                                  <button onclick="window.open('https://github.com/SavelichevB/WaveChat')">GitHub</button>
+                                  <button onclick="window.open('https://t.me/@wavemini_ru')">Telegram</button>
                                </div>
                             </div>
                         </div>
                         <div class="card-project">
-                            <img src="./pictures/main-icon-static.png" class="img-card-project"/>
+                            <img src="./pictures/wavelance.jpg" style="object-position: 0 50%;" class="img-card-project"/>
                             <section>
                                 <img src="./pictures/wavelance.jpg" class="icon-card-project"/>
                                 <div class="project-info">
@@ -86,25 +105,42 @@
                             <div class="bio-project-card">
                                <span>Фриланс биржа в виде Telegram бота с рейтингом, оплатой звездами и ивентовыми акциями.</span>
                                <div class="project-card-btn">
-                                  <button>GitHub</button>
-                                  <button>Telegram</button>
+                                  <button onclick="window.open('https://github.com/SavelichevB/WaveLance')">GitHub</button>
+                                  <button onclick="window.open('https://t.me/@wavemini_ru')">Telegram</button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="card-project">
+                            <img src="https://wavemini.ru/image/PI.png" style="object-position: 0 0;" class="img-card-project"/>
+                            <section>
+                                <img src="./pictures/main-icon-static.png" class="icon-card-project"/>
+                                <div class="project-info">
+                                     <h3>Макет IPhone</h3>
+                                     <a>#HTML #CSS #JS</a>
+                                </div>
+                            </section>
+                            <div class="bio-project-card">
+                               <span>Творческий проект, созданный для развлечения. Макет IPhone 17 Pro Max. Особенности: динамический остров, настройки и многое другое..</span>
+                               <div class="project-card-btn">
+                                  <button onclick="window.open('https://github.com/SavelichevB/Sample-IPhone-WEB')">GitHub</button>
+                                  <button onclick="window.open('https://t.me/@wavemini_ru')">Telegram</button>
                                </div>
                             </div>
                         </div>
                     </div>
                  </div>
-                 <div class="contact-block">
+                 <div id="contact" class="contact-block fade-in">
                     <h1>Наши контакты:</h1>
                     <div class="contact-section">
                         <div>
-                            <a>
+                            <a href="https://t.me/@DevWave">
                                 <i class="fa-brands fa-telegram" aria-hidden="true"></i>
-                                <p>@WaveDev</p>
+                                <p>@DevWave</p>
                                 Telegram
                             </a>
-                            <a>
+                            <a href="https://vk.com/waveminidev">
                                 <i class="fa-brands fa-vk"></i>
-                                <p>@WaveDeve</p>
+                                <p>@waveminidev</p>
                                 VK
                             </a>
                         </div>
@@ -112,7 +148,7 @@
                  </div>
               </div>
               <footer class="footer">
-                  <span>© WaveMini - 2026</span>
+                  <span id="year">© WaveMini - <script>new Date().getFullYear();</script></span>
                   <p>Все права защищены.</p>
                   <div>
                     <a href="https://t.me/wavemini_ru"><i class="fa-brands fa-telegram"></i></a>
